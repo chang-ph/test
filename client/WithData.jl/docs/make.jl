@@ -11,5 +11,6 @@ makedocs(sitename="WithData.jl",
 )
 
 deploydocs(
-    repo = "github.com/chang-ph/test"
+    repo = "github.com/chang-ph/test",
+    devbranch="t",
 )
