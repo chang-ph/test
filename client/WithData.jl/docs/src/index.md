@@ -1,4 +1,4 @@
-## Guide
+## EEGuide
 
 ### Implement the model
 
