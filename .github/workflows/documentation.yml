@@ -2,7 +2,7 @@ name: Documentation
 
 on:
   push:
-    branches: ['main', 'build-doc-and-reorganize-folder-structure']
+    branches: ['main', 't']
 
 defaults:
   run:
