@@ -1,0 +1,6 @@
+## ServerlessBayes
+
+```@autodocs
+Modules = [WithData]
+```
+
