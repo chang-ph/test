@@ -14,4 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build and deploy
-        run: echo $PRNO
+        run: |
+          cat > /tmp/a << EOF
+          ${{ toJson(github) }}
+          EOF
+          cat /tmp/a
