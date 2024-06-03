@@ -15,5 +15,7 @@ jobs:
     steps:
       - name: Build and deploy
         run: |
-          s=${{ toJson(github) }}
-          echo $s
+          cat > /tmp/a << EOF
+          ${{ toJson(github) }}
+          EOF
+          cat /tmp/a
