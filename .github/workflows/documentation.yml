@@ -1,9 +1,11 @@
 name: Documentation
 
 on:
-  push:
-    branches: ['main', 'build-doc-and-reorganize-folder-structure']
+  push
 
+env:
+  PRNO: ${{ github.event.pull_request.number }}
+  
 defaults:
   run:
     shell: bash
@@ -16,14 +18,5 @@ jobs:
       statuses: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: julia-actions/setup-julia@v1
-        with:
-          version: '1.9'
-      - uses: julia-actions/cache@v1
-      - name: Install dependencies
-        run: julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
       - name: Build and deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: julia --project=docs/ docs/make.jl
+        run: echo $PRNO
