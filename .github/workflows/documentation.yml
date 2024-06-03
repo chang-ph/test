@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build and deploy
-        run: git log
+        run: echo ${{ github.event.pull_request }}
